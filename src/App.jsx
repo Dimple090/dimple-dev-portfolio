@@ -46,7 +46,7 @@ export default function App() {
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
       {/* Main Container Layout */}
-      <main className="relative max-w-7xl mx-auto z-10">
+      <main className="relative max-w-7xl mx-auto">
         
         {/* Hero Landing */}
         <Hero />
