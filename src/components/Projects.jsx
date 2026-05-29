@@ -178,7 +178,7 @@ export default function Projects() {
                     <p className="text-xs text-slate-400 light:text-[#6c584b]/75 font-sans font-medium mt-1">
                       {project.subtitle}
                     </p>
-                    <p className="text-xs text-slate-400 light:text-[#6c584b]/80 leading-relaxed mt-4 line-clamp-3">
+                    <p className="text-xs text-slate-400 light:text-[#6c584b]/80 leading-relaxed mt-4">
                       {project.description}
                     </p>
                   </div>
@@ -221,14 +221,14 @@ export default function Projects() {
       <AnimatePresence>
         {selectedProject && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-[#2c221b]/80 backdrop-blur-md px-4"
+            className="fixed inset-0 z-50 flex items-start justify-center bg-[#2c221b]/80 backdrop-blur-md px-4 py-8 md:py-16 overflow-y-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              className="w-full max-w-2xl rounded-3xl glass-card border border-white/8 shadow-2xl overflow-hidden text-left relative flex flex-col max-h-[85vh]"
+              className="w-full max-w-2xl rounded-3xl glass-card border border-white/8 shadow-2xl overflow-hidden text-left relative flex flex-col my-auto"
               initial={{ scale: 0.9, y: 30, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 30, opacity: 0 }}
@@ -246,12 +246,12 @@ export default function Projects() {
               </button>
 
               {/* Modal Visual Mockup Header */}
-              <div className="w-full h-40 bg-slate-950 flex items-center justify-center overflow-hidden relative border-b border-white/5 light:border-slate-200">
+              <div className="w-full h-48 bg-slate-950 flex items-center justify-center overflow-hidden relative border-b border-white/5 light:border-slate-200">
                 {selectedProject.visualMockup}
               </div>
 
-              {/* Scrollable details content */}
-              <div className="p-6 overflow-y-auto space-y-6 flex-grow">
+              {/* Details content */}
+              <div className="p-6 space-y-6 flex-grow">
                 
                 {/* Title */}
                 <div>
