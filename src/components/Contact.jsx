@@ -218,7 +218,7 @@ export default function Contact() {
                   </button>
                 </div>
                 
-                <div className="space-y-3 max-h-[180px] overflow-y-auto pr-1 scrollbar-none">
+                <div className="space-y-3 pr-1">
                   {outbox.map((msg) => (
                     <div
                       key={msg.id}
