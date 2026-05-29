@@ -183,7 +183,7 @@ export default function Resume() {
       <AnimatePresence>
         {isPreviewOpen && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-start justify-center bg-[#2c221b]/80 backdrop-blur-md px-4 py-4 md:py-8 overflow-y-auto"
+            className="fixed inset-0 z-[100] flex items-start justify-center bg-[#2c221b]/80 backdrop-blur-md px-4 py-4 md:py-8 overflow-y-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
